@@ -43,8 +43,6 @@ def h5ad_reader(file_name, modality='RNA'):
     return X, labels, adata
         
 
-
-
 def read_from_h5ad(rna_h5ad_path, atac_h5ad_path, gtf_path):
     # Read RNA data from h5ad
     rna_data, rna_labels, rna_adata = h5ad_reader(rna_h5ad_path, 'RNA')
@@ -190,10 +188,7 @@ class Load_data():
         if num_workers < 0:
             num_workers = 0
 
-        kwargs = {'num_workers': num_workers, 'pin_memory': False} 
-        
-        
-                
+        kwargs = {'num_workers': num_workers, 'pin_memory': False}    
                 
         # load data
         train_rna_loaders = []
@@ -241,14 +236,11 @@ class Load_data():
 
 if __name__ == "__main__":
     config = Config()
-    rna_data = Dataloader(True, config.rna_paths[0], config.rna_labels[0])
-    #print 'rna data:', rna_data.input_size, rna_data.input_size_protein, len(rna_data.data)
-    
-    atac_data = DataloaderWithoutLabel(True, config.atac_paths[0])
-    #print 'atac data:', atac_data.input_size, atac_data.input_size_protein, len(atac_data.data)
-    
+    rna_data = Dataloader(True, config.rna_paths[0], config.rna_labels[0]) 
+    atac_data = DataloaderWithoutLabel(True, config.atac_paths[0])  
     
     train_rna_loaders, test_rna_loaders, train_atac_loaders, test_atac_loaders = Load_data(config).getloader()
     print(len(train_rna_loaders), len(test_atac_loaders))
     
     print(len(train_rna_loaders[1]), len(train_atac_loaders[0]))
+
