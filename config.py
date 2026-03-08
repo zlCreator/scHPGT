@@ -24,7 +24,7 @@ class Config(object):
         
         # Spices: "human" for gencode.v49.annotation.gtf,
         #         "mouse" for gencode.vM25.chr_patch_hapl_scaff.annotation.gtf
-        self.gtf_path = [f'/home/czl/Datasets/gencode.v49.annotation.gtf']
+        self.gtf_path = [f'./gencode.v49.annotation.gtf']
         
         
         self.input_size = 0
