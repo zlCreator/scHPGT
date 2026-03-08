@@ -3,7 +3,7 @@ Single-cell multi-omics technologies enable joint interrogation of gene expressi
 
 
 
-[image](scHPGT/main/Method.png)
+[image](https://github.com/zlCreator/scHPGT/main/Method.png)
 
 # Data
 The required input files are scRNA-seq files in the `.h5ad` format and scATAC-seq files with gene activity matrices in the `.h5ad` format. Example files can be downloaded through the following links:
