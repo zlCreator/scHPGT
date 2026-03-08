@@ -5,12 +5,6 @@ from torch.autograd import Variable
 import numpy as np
 
 
-def _one_hot(tensor, num):
-    b = list(tensor.size())[0]
-    onehot = torch.cuda.FloatTensor(b, num).fill_(0)
-    ones = torch.cuda.FloatTensor(b, num).fill_(1)
-    out = onehot.scatter_(1, torch.unsqueeze(tensor, 1), ones)
-    return out
 
 
 class regu(nn.Module):
