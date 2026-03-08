@@ -7,7 +7,7 @@ Single-cell multi-omics technologies enable joint interrogation of gene expressi
 
 
 # Examples
-
+The required input files consist of scRNA-seq expression matrices in .h5ad format (with genes as features) and scATAC-seq chromatin accessibility matrices in .h5ad format (with peaks as features). We can configure the file paths and hyper-parameters via 'config.py' and then execute the pipeline by running 'main.py'.
 ## config.py
 ```python
 import torch
