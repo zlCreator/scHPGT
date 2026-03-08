@@ -29,7 +29,7 @@ class Config(object):
         
         self.input_size = 0
         
-        # Training config            
+        # Parameter settings         
         self.batch_size = 256
         self.LRrecon = 0.007  
         self.Prior_edge = 20      
