@@ -68,15 +68,6 @@ class Recon():
             param_group['lr'] = lr
 
 
-    def load_checkpoint(self, args):
-        if self.config.checkpoint is not None:
-            if os.path.isfile(self.config.checkpoint):
-                print("=> loading checkpoint '{}'".format(self.config.checkpoint))
-                checkpoint = torch.load(self.config.checkpoint)                
-                self.model_encoder.load_state_dict(checkpoint['model_encoding_state_dict'])
-                self.model_cell.load_state_dict(checkpoint['model_cell_state_dict'])
-            else:
-                print("=> no resume checkpoint found at '{}'".format(self.config.checkpoint))
 
 
     def train(self, epoch):
