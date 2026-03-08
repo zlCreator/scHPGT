@@ -44,5 +44,5 @@ class Config(object):
         self.momentum = 0.9       
         self.use_cr = True
         self.seed = 1
-        self.checkpoint = '' 
+
         
