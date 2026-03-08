@@ -25,24 +25,21 @@ class Config(object):
         else:
             self.device = torch.device('cpu')
 
-        self.type = 0
         self.name = 'PBMC3k'
         name = self.name
-        self.atac_labels = [] 
         # H5AD files paths
         self.rna_h5ad_path = [f'./{name}/RNA.h5ad']
         self.atac_h5ad_path = [f'./{name}/ATAC.h5ad']
         
-        
         # Spices: "human" for gencode.v49.annotation.gtf,
         #         "mouse" for gencode.vM25.chr_patch_hapl_scaff.annotation.gtf
-        self.gtf_path = [f'/home/czl/Datasets/gencode.v49.annotation.gtf']
+        self.gtf_path = [f'./gencode.v49.annotation.gtf']
         
-        
-        self.input_size = 0
-        
-        # Training config            
+        # Parameter settings         
         self.batch_size = 256
+        self.seed = 1
+        self.type = 0
+        self.input_size = 0
         self.LRrecon = 0.007  
         self.Prior_edge = 20      
         self.Prior_ep = 20        
@@ -54,9 +51,7 @@ class Config(object):
         self.beta = 5
         self.gamma = 0.7
         self.momentum = 0.9       
-        self.use_cr = True
-        self.seed = 1
-        self.checkpoint = ''       
+        self.use_cr = True     
 ```
 
 
