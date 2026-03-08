@@ -31,6 +31,7 @@ class Config(object):
         
         # Parameter settings         
         self.batch_size = 256
+        self.seed = 1
         self.LRrecon = 0.007  
         self.Prior_edge = 20      
         self.Prior_ep = 20        
@@ -43,6 +44,6 @@ class Config(object):
         self.gamma = 0.7
         self.momentum = 0.9       
         self.use_cr = True
-        self.seed = 1
+
 
         
