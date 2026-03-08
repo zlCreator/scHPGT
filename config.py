@@ -16,7 +16,6 @@ class Config(object):
         self.type = 0
         self.name = 'PBMC3k'
         name = self.name
-        self.atac_labels = [] 
         # H5AD files paths
         self.rna_h5ad_path = [f'./{name}/RNA.h5ad']
         self.atac_h5ad_path = [f'./{name}/ATAC.h5ad']
