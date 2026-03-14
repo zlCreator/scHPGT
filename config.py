@@ -28,7 +28,7 @@ class Config(object):
         self.seed = 1
         self.type = 0
         self.input_size = 0
-        self.LRrecon = 0.007  
+        self.LRrecon = 0.005  
         self.Prior_edge = 20      
         self.Prior_ep = 20        
         self.emb_size = 64
